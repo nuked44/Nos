@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-fn main() {
-    println!("Hello, world!");
-=======
+
 #![no_std]
 #![no_main]
 
@@ -15,5 +12,4 @@ fn panic(_info: &PanicInfo) -> ! {
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
     loop {}
->>>>>>> 2931023 (custom architecture implemented)
 }

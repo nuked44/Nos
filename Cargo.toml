@@ -1,14 +1,9 @@
 [package]
-<<<<<<< HEAD
-name = "Nos"
-version = "0.1.0"
-edition = "2018"
-=======
+
 name = "n_os"
 version = "0.1.0"
 edition = "2018"
 author = ["nuked44 <nuked44@gmail.com>"]
->>>>>>> 2931023 (custom architecture implemented)
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
