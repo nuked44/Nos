@@ -6,7 +6,7 @@
 
 
 use core::panic::PanicInfo;
-use n_os::{QemuExitCode, exit_qemu, serial_print, serial_println, Testable};
+use n_os::{QemuExitCode, exit_qemu, serial_print, serial_println};
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {

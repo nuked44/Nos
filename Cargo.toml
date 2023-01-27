@@ -3,7 +3,7 @@
 name = "n_os"
 version = "0.1.0"
 edition = "2018"
-author = ["nuked44 <nuked44@gmail.com>"]
+authors = ["nuked44 <nuked44@gmail.com>"]
 
 [package.metadata.bootimage]
 test-args = [
