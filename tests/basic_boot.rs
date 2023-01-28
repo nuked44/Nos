@@ -4,8 +4,12 @@
 #![test_runner(n_os::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
+//------------------ IMPORTS ------------------
+
 use core::panic::PanicInfo;
-use n_os::{println};
+use n_os::println;
+
+//------------------ ENTRY POINT ------------------
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
@@ -13,12 +17,6 @@ pub extern "C" fn _start() -> ! {
 
     loop {}
 }
-
-/*
-fn test_runner(tests: &[&dyn Fn()]) {
-    unimplemented!();
-}
- */
 
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
