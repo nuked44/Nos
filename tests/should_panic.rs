@@ -4,7 +4,7 @@
 //------------------ IMPORTS ------------------
 
 use core::panic::PanicInfo;
-use n_os::{QemuExitCode, exit_qemu, serial_print, serial_println};
+use n_os::{exit_qemu, serial_print, serial_println, QemuExitCode};
 
 //------------------ ENTRY POINT ------------------
 
@@ -13,7 +13,7 @@ pub extern "C" fn _start() -> ! {
     should_fail();
     serial_println!("[test did not panic]");
     exit_qemu(QemuExitCode::Failed);
-    loop{}
+    loop {}
 }
 
 #[panic_handler]

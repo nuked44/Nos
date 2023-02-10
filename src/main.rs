@@ -1,6 +1,5 @@
 #![no_std]
 #![no_main]
-
 #![feature(custom_test_frameworks)]
 #![test_runner(n_os::test_runner)]
 #![reexport_test_harness_main = "test_main"]
@@ -22,19 +21,20 @@ pub extern "C" fn _start() -> ! {
     test_main();
 
     println!("It did not crash!");
-    loop {}
+    loop {
+    }
 }
 
 //------------------ PANIC HANDLING ------------------
 
-#[cfg(not(test))]
+#[cfg(any(not(test), rust_analyzer))]
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     println!("{}", info);
     loop {}
 }
 
-#[cfg(test)]
+#[cfg(all(test, not(rust_analyzer)))]
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     n_os::test_panic_handler(info)

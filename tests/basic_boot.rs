@@ -20,7 +20,7 @@ pub extern "C" fn _start() -> ! {
 
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
-    n_os::test_panic_handler(info)    
+    n_os::test_panic_handler(info)
 }
 
 #[test_case]
