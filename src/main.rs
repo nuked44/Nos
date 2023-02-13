@@ -21,8 +21,7 @@ pub extern "C" fn _start() -> ! {
     test_main();
 
     println!("It did not crash!");
-    loop {
-    }
+    n_os::hlt_loop();
 }
 
 //------------------ PANIC HANDLING ------------------
@@ -31,7 +30,7 @@ pub extern "C" fn _start() -> ! {
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     println!("{}", info);
-    loop {}
+    n_os::hlt_loop();
 }
 
 #[cfg(all(test, not(rust_analyzer)))]
